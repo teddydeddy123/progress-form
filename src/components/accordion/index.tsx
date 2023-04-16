@@ -42,7 +42,7 @@ export const Accordion = ({ data, first, last, updateProgress }: Props) => {
               <S.Input
                 id={task.description}
                 type="checkbox"
-                checked={task.checked ? true : false}
+                checked={task.checked}
                 onChange={() => {
                   task.checked = !task.checked;
                   updateProgress();
