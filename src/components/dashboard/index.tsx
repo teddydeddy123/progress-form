@@ -16,7 +16,7 @@ export const Dashboard = () => {
       .then((data) => setData(data));
   }, []);
 
-  const updateProgress = () => {
+  const updateProgressValue = () => {
     const tasks = data.flatMap((group) => group.tasks);
     const checkedValue = tasks
       .filter((task) => task.checked)
@@ -27,7 +27,7 @@ export const Dashboard = () => {
   };
 
   useEffect(() => {
-    updateProgress();
+    updateProgressValue();
   }, [data]);
 
   const tasks = data.flatMap((group) => group.tasks);
@@ -43,7 +43,7 @@ export const Dashboard = () => {
             data={group}
             first={i === 0}
             last={i === data.length - 1}
-            updateProgress={updateProgress}
+            updateProgress={updateProgressValue}
           />
         ))}
       </S.Tasks>
