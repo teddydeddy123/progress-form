@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
+    "prettify": "prettier --write \"src/**/*.{ts,tsx}\"",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
@@ -20,6 +21,7 @@
     "@types/react-dom": "^18.0.11",
     "@types/styled-components": "^5.1.26",
     "@vitejs/plugin-react": "^3.1.0",
+    "prettier": "^2.8.7",
     "typescript": "^4.9.3",
     "vite": "^4.2.0"
   }
